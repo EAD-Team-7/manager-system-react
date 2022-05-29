@@ -12,7 +12,7 @@ import { store } from 'store';
 // style + assets
 import 'assets/scss/style.scss';
 import { Auth0Provider } from '@auth0/auth0-react';
-import { domain, clientId } from './auth0.config';
+import Auth0Config from './auth0.config';
 import { createBrowserHistory } from "history";
 // ==============================|| REACT DOM RENDER  ||============================== //
 const history = createBrowserHistory();
@@ -26,8 +26,8 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <Auth0Provider
-                domain={domain}
-                clientId={clientId}
+                domain={Auth0Config.domain}
+                clientId={Auth0Config.clientId}
                 redirectUri={window.location.origin}
                 onRedirectCallback={onRedirectCallback}
             >

@@ -124,11 +124,11 @@ const TotalOrderLineChartCard = ({ isLoading }) => {
                                             <Grid item>
                                                 {timeValue ? (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        $108
+                                                        ₹10800
                                                     </Typography>
                                                 ) : (
                                                     <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                                        $961
+                                                        ₹960000
                                                     </Typography>
                                                 )}
                                             </Grid>
@@ -152,7 +152,7 @@ const TotalOrderLineChartCard = ({ isLoading }) => {
                                                         color: theme.palette.primary[200]
                                                     }}
                                                 >
-                                                    Total Order
+                                                    Total Sales
                                                 </Typography>
                                             </Grid>
                                         </Grid>

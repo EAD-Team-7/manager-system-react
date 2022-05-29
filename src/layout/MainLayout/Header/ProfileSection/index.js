@@ -34,13 +34,14 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import MainCard from 'ui-component/cards/MainCard';
 import Transitions from 'ui-component/extended/Transitions';
 import UpgradePlanCard from './UpgradePlanCard';
-import User1 from 'assets/images/users/user-round.svg';
+// import User1 from 'assets/images/users/user-round.svg';
 import { useAuth0 } from '@auth0/auth0-react';
 
 // assets
 import { IconLogout, IconSearch, IconSettings, IconUser } from '@tabler/icons';
 
 // ==============================|| PROFILE MENU ||============================== //
+const User1 = "https://avatars.dicebear.com/api/micah/fddsffdfdsdfdskgnfgnfdjkgnfdkhjgkjghgkfjhghfjd.svg"
 
 const ProfileSection = () => {
     const {
@@ -292,14 +293,14 @@ const ProfileSection = () => {
                                                 <ListItemButton
                                                     sx={{ borderRadius: `${customization.borderRadius}px` }}
                                                     selected={selectedIndex === 4}
-                                                    onClick={handleLogout}
+                                                    onClick={() => {
+                                                        logout({ returnTo: window.location.origin });
+                                                    }}
                                                 >
                                                     <ListItemIcon>
                                                         <IconLogout stroke={1.5} size="1.3rem" />
                                                     </ListItemIcon>
-                                                    <ListItemText onClick={() => {
-                                                        logout({ returnTo: window.location.origin });
-                                                    }} primary={<Typography variant="body2">Logout</Typography>} />
+                                                    <ListItemText  primary={<Typography variant="body2">Logout</Typography>} />
                                                 </ListItemButton>
                                             </List>
                                         </Box>

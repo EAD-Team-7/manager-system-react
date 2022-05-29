@@ -1,6 +1,5 @@
 // assets
 import { IconTypography, IconPalette, IconShadow, IconWindmill } from '@tabler/icons';
-
 // constant
 const icons = {
     IconTypography,
@@ -15,8 +14,7 @@ const utilities = {
     id: 'utilities',
     title: 'Utilities',
     type: 'group',
-    children: [
-        {
+    children: [{
             id: 'util-typography',
             title: 'Typography',
             type: 'item',
@@ -45,8 +43,7 @@ const utilities = {
             title: 'Icons',
             type: 'collapse',
             icon: icons.IconWindmill,
-            children: [
-                {
+            children: [{
                     id: 'tabler-icons',
                     title: 'Tabler Icons',
                     type: 'item',

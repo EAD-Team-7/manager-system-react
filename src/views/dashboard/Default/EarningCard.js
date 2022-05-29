@@ -92,7 +92,7 @@ const EarningCard = ({ isLoading }) => {
                                             <img src={EarningIcon} alt="Notification" />
                                         </Avatar>
                                     </Grid>
-                                    <Grid item>
+                                    {/* <Grid item>
                                         <Avatar
                                             variant="rounded"
                                             sx={{
@@ -137,14 +137,14 @@ const EarningCard = ({ isLoading }) => {
                                                 <ArchiveTwoToneIcon sx={{ mr: 1.75 }} /> Archive File
                                             </MenuItem>
                                         </Menu>
-                                    </Grid>
+                                    </Grid> */}
                                 </Grid>
                             </Grid>
                             <Grid item>
                                 <Grid container alignItems="center">
                                     <Grid item>
                                         <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>
-                                            $500.00
+                                        ₹500.00
                                         </Typography>
                                     </Grid>
                                     <Grid item>
@@ -169,7 +169,7 @@ const EarningCard = ({ isLoading }) => {
                                         color: theme.palette.secondary[200]
                                     }}
                                 >
-                                    Total Earning
+                                    Total Sales Today
                                 </Typography>
                             </Grid>
                         </Grid>
