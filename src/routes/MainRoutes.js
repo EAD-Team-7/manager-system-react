@@ -45,15 +45,15 @@ const MainRoutes = {
         },
         {
             path: '/utils/util-users-admin',
-            element: < AdminUsers / >
+            element: < AdminUsers name="admin" / >
         },
         {
-            path: '/utils/util-shadow',
-            element: < UtilsShadow / >
+            path: '/utils/util-users-stockist',
+            element: < AdminUsers name="stockist" / >
         },
         {
-            path: '/icons/tabler-icons',
-            element: < UtilsTablerIcons / >
+            path: '/utils/util-users-cashier',
+            element: < AdminUsers name="cashier" / >
         },
         {
             path: '/icons/material-icons',
