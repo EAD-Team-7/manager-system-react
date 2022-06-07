@@ -158,7 +158,7 @@ const AdminUtility = ({ name, loading }) => {
                         aria-describedby="modal-modal-description"
                     >
                         <Box sx={style}>
-                            <MainCard title="Add Admin User" secondary={<Button variant="contained" onClick={handleClose}> Close </Button>}>
+                            <MainCard title={`Add ${name.toProperCase()} User `} secondary={<Button variant="contained" onClick={handleClose}> Close </Button>}>
                                 <Grid container spacing={gridSpacing}>
                                     <Grid item xs={12} alignContent="center" spacing={2}>
                                         <form noValidate onSubmit={handleSubmit}>

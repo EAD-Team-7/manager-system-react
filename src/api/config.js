@@ -1,3 +1,3 @@
 export default {
-    apiUrl: "https://manager-system-backend.herokuapp.com" 
+    apiUrl: process.env.API_URL || "http://localhost:5000", 
 }
