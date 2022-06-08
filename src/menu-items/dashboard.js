@@ -18,6 +18,14 @@ const dashboard = {
             url: '/dashboard/default',
             icon: icons.IconDashboard,
             breadcrumbs: false
+        },
+        {
+            id: 'analysis',
+            title: 'Prediction System',
+            type: 'item',
+            url: '/dashboard/prediction',
+            icon: icons.IconDashboard,
+            breadcrumbs: false
         }
     ]
 };

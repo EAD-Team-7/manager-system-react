@@ -102,7 +102,7 @@ export default function componentStyleOverrides(theme) {
         MuiOutlinedInput: {
             styleOverrides: {
                 root: {
-                    background: bgColor,
+                    background: "rgb(255 0 0 / 0%)",
                     borderRadius: `${theme?.customization?.borderRadius}px`,
                     '& .MuiOutlinedInput-notchedOutline': {
                         borderColor: theme.colors?.grey400
@@ -116,7 +116,7 @@ export default function componentStyleOverrides(theme) {
                 },
                 input: {
                     fontWeight: 500,
-                    background: bgColor,
+                    background: "rgb(255 0 0 / 0%)",
                     padding: '15.5px 14px',
                     borderRadius: `${theme?.customization?.borderRadius}px`,
                     '&.MuiInputBase-inputSizeSmall': {

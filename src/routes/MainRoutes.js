@@ -21,7 +21,8 @@ const UtilsMaterialIcons = Loadable(lazy(() =>
     import ('views/utilities/MaterialIcons')));
 const UtilsTablerIcons = Loadable(lazy(() =>
     import ('views/utilities/TablerIcons')));
-
+const Prediction = Loadable(lazy(() =>
+    import ('views/dashboard/Default/Prediction')));
 // sample page routing
 const SamplePage = Loadable(lazy(() =>
     import ('views/sample-page')));
@@ -38,6 +39,10 @@ const MainRoutes = {
         {
             path: '/dashboard/default',
             element: < DashboardDefault / >
+        },
+        {
+            path: '/dashboard/prediction',
+            element: < Prediction / >
         },
         {
             path: '/utils/util-typography',

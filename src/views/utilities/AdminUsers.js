@@ -20,7 +20,6 @@ import getRole from 'api/getRole';
 import deleteUser from 'api/deleteUser';
 
 
-// ===============================|| SHADOW BOX ||=============================== //
 
 const ShadowBox = ({ shadow }) => (
     <Card sx={{ mb: 3, boxShadow: shadow }}>
@@ -43,7 +42,6 @@ ShadowBox.propTypes = {
     shadow: PropTypes.string.isRequired
 };
 
-// ============================|| UTILITIES SHADOW ||============================ //
 
 const AdminUtility = ({ name, loading }) => {
     const [open, setOpen] = React.useState(false);
@@ -138,9 +136,10 @@ const AdminUtility = ({ name, loading }) => {
         <>
             {isLoading ? (
                 <Box sx={{
-                    position: 'relative',
-                    top: '50%',
-                    left: '50%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100%'
                 }}>
                     <CircularProgress />
                 </Box>
