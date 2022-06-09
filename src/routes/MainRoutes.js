@@ -41,7 +41,7 @@ const MainRoutes = {
             element: < DashboardDefault / >
         },
         {
-            path: '/dashboard/prediction',
+            path: '/dashboard/analysis',
             element: < Prediction / >
         },
         {

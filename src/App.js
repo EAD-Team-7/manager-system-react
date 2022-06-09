@@ -14,6 +14,9 @@ import themes from "themes";
 import NavigationScroll from "layout/NavigationScroll";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { LocalizationProvider } from "@mui/lab";
+import MomentUtils from "@date-io/moment";
+import moment from "moment";
+
 
 // ==============================|| APP ||============================== //
 
@@ -25,9 +28,9 @@ const App = () => {
       <ThemeProvider theme={themes(customization)}>
         <CssBaseline />
         <NavigationScroll>
-          <LocalizationProvider dateAdapter={AdapterMoment}>
+          {/* <LocalizationProvider dateLibInstance={moment} dateAdapter={MomentUtils}> */}
             <Routes />
-          </LocalizationProvider>
+          {/* </LocalizationProvider> */}
         </NavigationScroll>
       </ThemeProvider>
     </StyledEngineProvider>

@@ -17,6 +17,7 @@ import {
   TextField,
   TableCell,
 } from "@mui/material";
+import MomentUtils from "@date-io/moment";
 import CircularProgress from "@mui/material/CircularProgress";
 import DeleteIcon from "@mui/icons-material/Delete";
 import MainCard from "ui-component/cards/MainCard";
@@ -26,7 +27,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DesktopDatePicker as DatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 
 // project imports
 import { gridSpacing } from "store/constant";
@@ -110,12 +112,12 @@ const Prediction = () => {
     setIsLoading(true);
     setToDate(event);
     getAnalysis(
-        moment(fromDate).format("YYYY-MM-DD"),
-        moment(event).format("YYYY-MM-DD")
-      ).then((res) => {
-        setAnalytics(res.data);
-        setIsLoading(false);
-      });
+      moment(fromDate).format("YYYY-MM-DD"),
+      moment(event).format("YYYY-MM-DD")
+    ).then((res) => {
+      setAnalytics(res.data);
+      setIsLoading(false);
+    });
   };
   return (
     <>
@@ -135,21 +137,29 @@ const Prediction = () => {
           title="Sales Analysis"
           secondary={
             <>
-              <DesktopDatePicker
-                label="From Date"
-                inputFormat="DD-MM-yyyy"
-                variant="filled"
-                value={fromDate}
-                onChange={handleFromChange}
-                renderInput={(params) => <TextField {...params} />}
-              />
-              <DesktopDatePicker
-                label="To Date"
-                inputFormat="DD-MM-yyyy"
-                value={toDate}
-                onChange={handleToChange}
-                renderInput={(params) => <TextField {...params} />}
-              />
+              <LocalizationProvider
+                dateLibInstance={moment}
+                dateAdapter={MomentUtils}
+                locale="en-gb"
+              >
+                <DatePicker
+                  disableFuture
+                  label="From Date"
+                  inputFormat="DD-MM-yyyy"
+                  variant="filled"
+                  value={fromDate}
+                  onChange={handleFromChange}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+                <DatePicker
+                  disableFuture
+                  label="To Date"
+                  inputFormat="DD-MM-yyyy"
+                  value={toDate}
+                  onChange={handleToChange}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
             </>
           }
         >

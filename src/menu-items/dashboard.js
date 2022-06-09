@@ -21,9 +21,9 @@ const dashboard = {
         },
         {
             id: 'analysis',
-            title: 'Prediction System',
+            title: 'Sales Analysis',
             type: 'item',
-            url: '/dashboard/prediction',
+            url: '/dashboard/analysis',
             icon: icons.IconDashboard,
             breadcrumbs: false
         }
